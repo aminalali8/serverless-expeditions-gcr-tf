@@ -2,7 +2,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      credentials = var.gcp_credentials
+      
       version = "~> 3.53"
     }
   }
@@ -10,6 +10,7 @@ terraform {
 
 provider "google" {
   project = var.project
+  credentials = var.gcp_credentials
 }
 
 locals {
